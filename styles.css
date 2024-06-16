@@ -299,6 +299,7 @@ body, html {
     padding: 0; /* Remove padding */
     background-color: #2A3236;
     box-shadow: none; /* Remove shadow */
+    padding-bottom:20px;
 }
 
 /* Profile image styles */
