@@ -116,15 +116,25 @@ document.addEventListener("DOMContentLoaded", function() {
                     message: message
                 })
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
-                alert('Thank you for your response!');
-                // Clear the form
-                document.getElementById('rsvpMessageForm').reset();
+                if (data.message === 'Email sent successfully') {
+                    alert('Thank you for your response!');
+                    // Clear the form
+                    document.getElementById('rsvpMessageForm').reset();
+                } else {
+                    console.error('Server response error:', data);
+                    alert('There was an error submitting your form. Server says: ' + data.message);
+                }
             })
             .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting your form.');
+                console.error('Network or server error:', error);
+                alert('There was an error submitting your form. Please try again later.');
             });
         } else {
             alert('Please fill out all required fields.');
