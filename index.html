@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wedding Invitation">
+    <meta property="og:description" content="Ayu & Agil's Wedding Invitation">
+    <meta property="og:image" content="adat2.jpeg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
+    <!-- Favicon -->
+    <link rel="icon" href="NPLOGO.png" type="image/x-icon">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Gwendolyn:wght@400;700&family=La+Belle+Aurore&family=Petit+Formal+Script&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cover Section -->
+    <div class="cover" id="cover">
+        <img id="couplePhotoDesktop" class="couple-photo" src="bridge6.jpeg" alt="Couple Photo for Desktop">
+        <img id="couplePhotoMobile" class="couple-photo" src="bridge1.jpeg" alt="Couple Photo for Mobile">
+        <h1>Ayu & Agil</h1>
+        <p>Kepada Yth.</p>
+        <h2 id="guestName"></h2>
+        <p>Kami mengundang Anda untuk menghadiri acara pernikahan kami</p>
+        <button id="openButton">Open Invitation</button>
+    </div>
+
+    <!-- Main Invitation Content -->
+    <div class="invitation" id="invitation">
+        <!-- Section 1: Introduction -->
+        <section class="section fade-in" id="section1">
+            <div class="content-section1">
+                <h1>Ayu & Agil</h1>
+                <p>We're getting married</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Quran Verse -->
+        <section id="quranSection" class="section">
+            <div class="quran-verse">
+                <blockquote>
+                    <p id="ayat" class="fade-slide">وَمِنۡ اٰيٰتِهٖۤ اَنۡ خَلَقَ لَكُمۡ مِّنۡ اَنۡفُسِكُمۡ اَزۡوَاجًا لِّتَسۡكُنُوۡۤا اِلَيۡهَا وَجَعَلَ بَيۡنَكُمۡ مَّوَدَّةً وَّرَحۡمَةً  ؕ اِنَّ فِىۡ ذٰ لِكَ لَاٰيٰتٍ لِّقَوۡمٍ يَّتَفَكَّرُوۡنَ</p>
+                    <p class="fade-slide">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." (Qur'an 30:21)</p>
+                    <cite class="fade-slide">Surah Ar-Rum (30:21)</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Section 3: Countdown -->
+        <section class="section" id="section2">
+            <h2 class="fade-slide">Coming Soon</h2>
+            <div id="countdown">
+                <div class="countdown-item fade-slide">
+                    <span id="daysNum" class="countdown-number"></span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item fade-slide">
+                    <span id="hoursNum" class="countdown-number"></span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item fade-slide">
+                    <span id="minutesNum" class="countdown-number"></span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item fade-slide">
+                    <span id="secondsNum" class="countdown-number"></span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Image Carousel -->
+        <section class="section" id="section3">
+            <div class="image-container fade-slide">
+                <img src="bridge4.jpeg" alt="Photo 1">
+                <img src="bridge5.jpeg" alt="Photo 2">
+                <img src="bridge6.jpeg" alt="Photo 3">
+                <img src="camp5.jpeg" alt="Photo 4">
+            </div>
+        </section>
+
+        <!-- Section 5: Profile -->
+        <section class="section" id="section4">
+            <h2 class="fade-slide">Our Profile</h2>
+            <div class="profile-box wife">
+                <img src="profileW.jpeg" alt="Wife's Profile Picture" class="profile-image fade-slide">
+                <h3 class="profile-name fade-slide">Ayu Lobika Lestari, S. Pd</h3>
+                <p class="profile-parents fade-slide">Putri dari Bapak Arahman & Ibu Baiq Suharni Ros Miati</p>
+                <a href="https://www.instagram.com/ayuarahman_?igsh=MTN2cXo0cnB6NTFzcA==" target="_blank" class="instagram-link fade-slide">
+                    <img src="instagram.png" alt="Instagram" class="instagram-icon">
+                    Follow on Instagram
+                </a>
+            </div>
+            <h2 class="fade-slide">&</h2>
+            <div class="profile-box husband">
+                <img src="profileH.jpeg" alt="Husband's Profile Picture" class="profile-image fade-slide">
+                <h3 class="profile-name fade-slide">Agil Munawar S.H</h3>
+                <p class="profile-parents fade-slide">Putra dari Bapak Jufri, S. Pd & Ibu Nuraidah, S. Pd</p>
+                <a href="https://www.instagram.com/molly_moccy97?igsh=MWQyZHUzdnd3MGNvZw==" target="_blank" class="instagram-link fade-slide">
+                    <img src="instagram.png" alt="Instagram" class="instagram-icon">
+                    Follow on Instagram
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 6: Event Details -->
+        <section class="section" id="section5">
+            <h2 class="fade-slide">Event Details</h2>
+            <div class="event-details">
+                <div class="event fade-slide">
+                    <h3>Akad</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Date: Kamis, 27 Juni, 2024</p>
+                    <p><i class="fas fa-clock"></i> Time: 19:30 WITA</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: Lapangan sepakbola Ilham desa Karambo</p>
+                    <div class="google-maps-button">
+                        <a href="https://www.google.com/maps?q=Lapangan+sepakbola+Ilham+desa+Karambo" target="_blank">View on Google Maps</a>
+                    </div>
+                </div>
+                <div class="event fade-slide">
+                    <h3>Resepsi</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Date: Jum'at, 28 Juni, 2024</p>
+                    <p><i class="fas fa-clock"></i> Time: 14:00 WITA</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: Lapangan sepakbola Ilham desa Karambo</p>
+                    <div class="google-maps-button">
+                        <a href="https://www.google.com/maps?q=Lapangan+sepakbola+Ilham+desa+Karambo" target="_blank">View on Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Gallery -->
+        <section id="section6" class="section">
+            <h2 class="fade-slide">Our Gallery</h2>
+
+            <!-- Swiper Container 1 -->
+            <div class="carousel-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper fade-slide">
+                        <div class="swiper-slide"><img src="adat1.jpeg" alt="Photo 1"></div>
+                        <div class="swiper-slide"><img src="adat2.jpeg" alt="Photo 2"></div>
+                        <div class="swiper-slide"><img src="adat3.jpeg" alt="Photo 3"></div>
+                        <div class="swiper-slide"><img src="adat4.jpeg" alt="Photo 4"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Swiper Container 2 -->
+            <div class="carousel-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper fade-slide">
+                        <div class="swiper-slide"><img src="bridge1.jpeg" alt="Photo 5"></div>
+                        <div class="swiper-slide"><img src="bridge2.jpeg" alt="Photo 6"></div>
+                        <div class="swiper-slide"><img src="bridge3.jpeg" alt="Photo 7"></div>
+                        <div class="swiper-slide"><img src="bridge7.jpeg" alt="Photo 8"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Swiper Container 3 -->
+            <div class="carousel-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper fade-slide">
+                        <div class="swiper-slide"><img src="camp1.jpeg" alt="Photo 9"></div>
+                        <div class="swiper-slide"><img src="camp2.jpeg" alt="Photo 10"></div>
+                        <div class="swiper-slide"><img src="camp3.jpeg" alt="Photo 11"></div>
+                        <div class="swiper-slide"><img src="camp4.jpeg" alt="Photo 12"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Swiper Container 4 -->
+            <div class="carousel-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper fade-slide">
+                        <div class="swiper-slide"><img src="madrid1.jpeg" alt="Photo 13"></div>
+                        <div class="swiper-slide"><img src="madrid2.jpeg" alt="Photo 14"></div>
+                        <div class="swiper-slide"><img src="madrid3.jpeg" alt="Photo 15"></div>
+                        <div class="swiper-slide"><img src="madrid4.jpeg" alt="Photo 16"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: RSVP and Message -->
+        <section id="section7" class="section">
+            <h2 class="fade-slide">RSVP & Message</h2>
+            <form id="rsvpMessageForm" action="https://reservation-message-handler.glitch.me/submit" method="POST">
+                <label for="formName">Name:</label>
+                <input type="text" id="formName" name="name" required>
+                
+                <label for="formEmail">Email:</label>
+                <input type="email" id="formEmail" name="email" required>
+                
+                <div class="form-group">
+                    <label for="attendance">Will you be attending?</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="messageContent">Your Message:</label>
+                    <textarea id="messageContent" name="message" required></textarea>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Section 9: Bank Details -->
+        <section id="bankDetailsSection" class="section">
+            <h2>Bank Details</h2>
+            <div class="bank-details fade-slide">
+                <div class="bank">
+                    <img src="BRI.png" alt="Bank Logo 1" class="bank-logo">
+                    <p class="bank-name">Ayu Lobika Lestari</p>
+                    <p class="account-number">
+                        <span id="accountNumber1">46440100927533</span>
+                        <button class="copy-button" onclick="copyAccountNumber('accountNumber1')">Copy</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="thankYouSection" class="section">
+            <div class="thank-you-content">
+                <h2>Thank You for Attending!</h2>
+                <p>We are grateful to have shared this special moment with you. Your presence made our day even more memorable.</p>
+            </div>
+        </section>
+        
+
+        <!-- Section 10: Social Media -->
+        <section class="section" id="section8">
+            <div class="brand-logo fade-slide">
+                <img src="nicwaprojectlogo.png" alt="Brand Logo">
+            </div>
+            <div class="social-media fade-slide">
+                <a href="https://www.facebook.com/profile.php?id=61560664461271&mibextid=LQQJ4d" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/nicwaproject?igsh=enk4YWxoa24zNzY5&utm_source=qr" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </section>
+
+        <!-- Music Toggle Button -->
+        <button id="music-toggle">
+            <img src="pause.png" alt="Play" id="music-icon">
+        </button>
+        <audio id="background-music" src="Bagas Ran - Cinta Terakhirku (Official Lyric Video).mp3"></audio>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

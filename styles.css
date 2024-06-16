@@ -1,0 +1,830 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color:#2A3236;
+}
+
+/* ........................COVER....................... */
+.cover, .invitation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #2A3236;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning */
+    z-index: 10; /* Ensure cover is on top */
+}
+
+.cover {
+    line-height: 0.5;
+    overflow: hidden; /* Prevent scrolling */
+    z-index: 1; /* Ensure content is above the background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color:white;
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('camp5.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure background is behind content */
+}
+
+.cover h1 {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5em;
+    z-index: 2; /* Ensure text is above background */
+}
+
+#cover img.couple-photo {
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 2; /* Ensure image is above background */
+}
+
+#couplePhotoDesktop {
+    max-width: 300px;
+    display: none;
+    z-index: 2; /* Ensure image is above background */
+}
+
+#couplePhotoMobile {
+    display: block;
+    width: 90%; /* Default width for mobile */
+    max-width: 350px; /* Maximum width for mobile */
+    z-index: 2; /* Ensure image is above background */
+}
+
+@media (max-width: 600px) {
+    #couplePhotoMobile {
+        width: 80%; /* Adjust width for larger mobile screens */
+        max-width: 350px; /* Adjust maximum width for larger mobile screens */
+    }
+    .cover {
+        line-height: 1;
+    }
+    .cover h1 {
+        font-size: 3.6em;
+    }
+    .cover p {
+        font-size: 14px;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    #couplePhotoDesktop {
+        display: block;
+        width: 80%; /* Span 80% width of the viewport */
+    }
+
+    #couplePhotoMobile {
+        display: none;
+    }
+}
+
+/* ................INVITATION............... */
+.invitation {
+    display: none;
+}
+
+.section {
+    display: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Add relative positioning */
+}
+
+/* ..................SECTION 1.................. */
+#section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items to the bottom */
+    align-items: center;
+    background-image: url('bridge4.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    line-height: 0.2;
+    z-index: 5; /* Ensure section is below the cover */
+}
+
+#section1 h1 {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+
+.content-section1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+    .content-section1 {
+        margin-bottom: 15%;
+    }
+}
+
+/* ...............SECTION 2.............. */
+#section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #C9BEBF; /* Example background color */
+    z-index: 4; /* Ensure section is below section 1 */
+}
+
+#section2 h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size:2em;
+}
+/* Countdown Container */
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure items can wrap to the next line */
+}
+
+/* Countdown Items */
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: #2A3236; /* Light background color */
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* Countdown Numbers */
+.countdown-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff; /* Dark text color */
+}
+
+/* Countdown Labels */
+.countdown-label {
+    font-size: 0.8em;
+    color: #fff; /* Medium-dark text color */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    #countdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-gap: 50px; /* Gap between items */
+        justify-items: center;
+    }
+
+    .countdown-item {
+        margin: 0;
+    }
+}
+
+#countdown {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+/* ............Section 3 image............ */
+#section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Ensure section takes full viewport height */
+    overflow: hidden; /* Hide any overflowing images */
+    position: relative;
+    background-color: #C9BEBF; /* Example background color */
+    z-index: 3; /* Ensure section is below section 2 */
+}
+
+/* Image container */
+.image-container {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+/* Image styles */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-container img.active {
+    opacity: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ...............Section 4 Profile............ */
+#section4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    z-index: 2; /* Ensure section is below section 3 */
+    background-color: #C9BEBF;
+}
+
+#section4 h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+}
+
+/* Profile box styles */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 0; /* Remove padding */
+    background-color: #2A3236;
+    box-shadow: none; /* Remove shadow */
+}
+
+/* Profile image styles */
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Optional: Add a small border-radius */
+}
+
+/* Profile name styles */
+.profile-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* Dark text color */
+}
+
+/* Profile parents styles */
+.profile-parents {
+    font-size: 1em;
+    color: #fff; /* Medium-dark text color */
+}
+
+/* Instagram link styles */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.instagram-link:hover {
+    background-color: #fff;
+    color: #2A3236;
+}
+
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #section4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-box {
+        width: 80%;
+    }
+}
+
+
+/* Section 5 Event Details */
+#section5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-image: url('adat2.jpeg');
+    background-size: cover;
+}
+
+#section5 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.event-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.event {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    width: 100%;
+    text-align: left;
+}
+
+.event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.event p i {
+    margin-right: 10px;
+}
+
+.google-maps-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.google-maps-button a {
+    background-color: #2A3236;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.google-maps-button a:hover {
+    background-color: #C9BEBF;
+    color:black;
+}
+
+/* ...........Section 6 Gallery.......... */
+/* Section 6 styles */
+#section6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Add relative positioning */
+    z-index: 0; /* Ensure section is below section 5 */
+}
+
+#section6 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color:#fff;
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    overflow: hidden; /* Ensures no overflow from the container */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image covers the entire slide */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire slide */
+}
+
+.carousel-container {
+    margin-bottom: 20px; /* Adds gap between carousels */
+}
+
+/* Quran Section */
+#quranSection {
+    padding: 40px 20px;
+    background-color: #C9BEBF;
+    text-align: center;
+}
+
+
+.quran-verse blockquote {
+    font-family: "Amiri", serif;
+    font-size: 1em;
+    font-style: italic;
+    color: #2A3236;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 5px solid #2A3236;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#ayat {
+    font-family: "Amiri", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.3em;
+}
+
+.quran-verse cite {
+    display: block;
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* RSVP & Message Section */
+/* Section 7 - RSVP & Message */
+#section7 {
+    background-color: #2A3236; /* Dark background color */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section7 h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff; /* Light text color */
+}
+
+#rsvpMessageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#rsvpMessageForm label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#rsvpMessageForm input,
+#rsvpMessageForm select,
+#rsvpMessageForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2A3236; /* Dark text color */
+    transition: border-color 0.3s ease;
+}
+
+#rsvpMessageForm input:focus,
+#rsvpMessageForm select:focus,
+#rsvpMessageForm textarea:focus {
+    outline: none;
+    border-color: #5c94bd; /* Highlight color on focus */
+}
+
+textarea {
+    height: 150px; /* Adjust textarea height */
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #C9BEBF; /* Button background color */
+    color: black;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2A3236; /* Darker shade on hover */
+    color:white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #rsvpMessageForm {
+        width: 90%;
+    }
+}
+
+
+
+/* Section 8 styles */
+#section8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    z-index: -2; /* Ensure section is below section 7 */
+    padding-bottom:20px;
+}
+
+#section8 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#section8 p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.brand-logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.social-media img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+/* Thank You Section */
+#thankYouSection {
+    background-image: url('hitam3.jpeg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#thankYouSection .thank-you-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#thankYouSection h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#thankYouSection p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .................BUTTON CONTROL................... */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2A3236;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C9BEBF;
+    color: black;
+}
+
+/* .....................AUDIO CONTROL.................... */
+/* Music Toggle Button */
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#music-toggle img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ...............  ANIMATION............... */
+.fade-in {
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bank Details Section */
+#bankDetailsSection {
+    background-color: #C9BEBF;
+    padding-bottom:20px;
+}
+
+.bank-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2A3236;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    color:white;
+}
+
+.bank-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.bank-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.account-number {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.copy-button {
+    background-color: #C9BEBF;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top:10px;
+}
+
+.copy-button:hover {
+    background-color: #2A3236;
+    color:white;
+}
