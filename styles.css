@@ -76,7 +76,7 @@ body, html {
 #couplePhotoMobile {
     display: block;
     width: 90%; /* Default width for mobile */
-    max-width: 350px; /* Maximum width for mobile */
+    max-width: 380px; /* Maximum width for mobile */
     z-index: 2; /* Ensure image is above background */
     object-fit:cover;
 }
@@ -87,6 +87,8 @@ body, html {
     }
     .cover {
         line-height: 1;
+        padding-top:0;
+        margin-top:0;
     }
     .cover h1 {
         font-size: 3.6em;
