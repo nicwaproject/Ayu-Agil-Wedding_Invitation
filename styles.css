@@ -90,6 +90,8 @@ body, html {
     }
     .cover h1 {
         font-size: 3.6em;
+        margin:0;
+        padding:0;
     }
     .cover p {
         font-size: 14px;
