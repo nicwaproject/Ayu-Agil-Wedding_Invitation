@@ -78,7 +78,7 @@ body, html {
 
 @media (max-width: 600px) {
     #couplePhotoMobile {
-        width: 65%; /* Adjust width for larger mobile screens */
+        width: 60%; /* Adjust width for larger mobile screens */
         max-width: 350px; /* Adjust maximum width for larger mobile screens */
     }
     .cover {
