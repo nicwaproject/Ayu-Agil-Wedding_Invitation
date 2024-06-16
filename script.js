@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(showNextImage, 2000); // Change image every 2 seconds
 
-    // Form Submission Logic
+     // Form Submission Logic
     document.getElementById('rsvpMessageForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Please fill out all required fields.');
         }
     });
-
+    
     // Swiper Carousel
     var carousels = document.querySelectorAll('.swiper-container');
     carousels.forEach(function(carousel) {
