@@ -61,12 +61,16 @@ body, html {
     border-radius: 10px;
     margin-bottom: 20px;
     z-index: 2; /* Ensure image is above background */
+    width: 400px;  /* Width of the box */
+    height: 300px; /* Height of the box */
+    border: 1px solid white;  /* Optional: border to make it look like a box */
 }
 
 #couplePhotoDesktop {
     max-width: 300px;
     display: none;
     z-index: 2; /* Ensure image is above background */
+    object-fit:cover;
 }
 
 #couplePhotoMobile {
@@ -74,12 +78,12 @@ body, html {
     width: 90%; /* Default width for mobile */
     max-width: 350px; /* Maximum width for mobile */
     z-index: 2; /* Ensure image is above background */
+    object-fit:cover;
 }
 
 @media (max-width: 600px) {
     #couplePhotoMobile {
-        width: 60%; /* Adjust width for larger mobile screens */
-        max-width: 350px; /* Adjust maximum width for larger mobile screens */
+        object-fit:cover;
     }
     .cover {
         line-height: 1;
@@ -102,6 +106,12 @@ body, html {
 
     #couplePhotoMobile {
         display: none;
+    }
+
+    #cover img.couple-photo {
+        width: 700px;  /* Width of the box */
+        height: 200px; /* Height of the box */
+        border: 1px solid white;  /* Optional: border to make it look like a box */
     }
 }
 
