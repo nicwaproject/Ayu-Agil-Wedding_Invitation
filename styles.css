@@ -168,6 +168,9 @@ body, html {
     .content-section1 {
         margin-bottom: 15%;
     }
+    #section1 {
+    background-image: url('bridge10.jpeg'); /* Replace with your image path */
+}
 }
 
 /* ...............SECTION 2.............. */
