@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
+    /*overflow: hidden;*/ /* Prevent scrolling */
     height: 100%;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -28,7 +28,7 @@ body, html {
 
 .cover {
     line-height: 0.5;
-    overflow: hidden; /* Prevent scrolling */
+    /*overflow: hidden;*/ /* Prevent scrolling */
     z-index: 1; /* Ensure content is above the background */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color:white;
